@@ -4,18 +4,18 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class UpButton extends Button {
+public class DownButton extends Button {
+
+	private ImageView downView;
 	
-	private ImageView upView; 
-	
-	public UpButton() {
+	public DownButton() {
 		super();
-		Image up = new Image(getClass().getClassLoader().getResourceAsStream("buttons/up_64.png"));
-		upView = new ImageView(up);
-		setGraphic(upView);
+		Image down = new Image(DownButton.class.getResourceAsStream("/down_64.png"));
+		downView = new ImageView(down);
+		setGraphic(downView);
 	}
 	
-	public UpButton(double x, double y) {
+	public DownButton(double x, double y) {
 		this();
 		setDimensions(x, y);
 	}
@@ -26,13 +26,11 @@ public class UpButton extends Button {
 	}
 	
 	public void setFitWidth(double f) {
-		upView.setFitWidth(f);
+		downView.setFitWidth(f);
 	}
 	
 	public void setFitHeight(double f) {
-		upView.setFitHeight(f);
+		downView.setFitHeight(f);
 	}
 	
-	
-
 }

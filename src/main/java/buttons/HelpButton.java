@@ -19,7 +19,7 @@ public class HelpButton extends Button {
 		ImageView helpButtonView = new ImageView();
 		helpButtonView.setFitHeight(20);
 		helpButtonView.setFitWidth(20);
-		helpButtonView.setImage(new Image(this.getClass().getResource("info_64.png").toExternalForm()));
+		helpButtonView.setImage(new Image(HelpButton.class.getResourceAsStream("/info_64.png")));
 		setGraphic(helpButtonView);
 		setOnAction(new EventHandler<ActionEvent>() {
 			@Override
